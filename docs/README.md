@@ -10,6 +10,7 @@
 
 - [Initial Architecture](architecture.md)
 - [Development Environment Setup](development-setup.md)
+- [Host Inventory](host-inventory.md)
 - [Architecture Decisions](decisions/README.md)
 
 ## Reference Implementation
@@ -22,7 +23,6 @@ The current focus is **Milestone 0 — Development Foundation**.
 
 The next documentation additions should include:
 
-- Finalized host inventory for `wbm-cogs-01`
 - Docker Compose architecture
 - Secrets management standard
 - Backup and restore runbook
