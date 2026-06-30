@@ -33,11 +33,12 @@ Website / External Event
 
 ### Core Services
 
-- **Workflow orchestration:** n8n, subject to final decision
+- **Workflow orchestration:** n8n
 - **Database:** PostgreSQL
-- **Ingress:** Caddy or another existing reverse-proxy standard
+- **Ingress:** Caddy
 - **AI provider:** configurable external API initially; local models may be evaluated later
-- **Observability:** container logs plus a lightweight health and alerting layer
+- **Notifications:** SMTP-compatible email initially
+- **Observability:** Docker health checks, container logs, and workflow execution history initially
 
 ## Architecture Boundaries
 
@@ -85,14 +86,16 @@ Environment-specific values belong in secret stores or environment files exclude
 - Avoid sending unnecessary customer data to AI providers.
 - Define data retention before handling real customer information.
 
-## Open Decisions
+## Recorded Decisions
 
-- Final workflow engine
-- Reverse-proxy approach
-- Initial LLM provider
-- Notification provider
-- Lead storage schema
-- Monitoring stack
-- Backup target and retention
+- Workflow engine: n8n
+- Database: PostgreSQL
+- Reverse proxy: Caddy
+- AI provider interface: configurable external provider
+- Notifications: SMTP-compatible email initially
+- Monitoring baseline: Docker health checks and logs
+- Backup target candidate: `/mnt/storage/aaa-ai-automation/`
 
-Each material decision should be captured under `docs/decisions/`.
+Each material decision is captured under `docs/decisions/`. Lead storage schema,
+production monitoring, and final backup retention remain future implementation
+details.

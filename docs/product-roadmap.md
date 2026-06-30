@@ -20,7 +20,7 @@ Deliver a reusable AI automation platform with a polished 513 Property Services 
 ### Exit Criteria
 
 - Repository can be cloned and initialized from documentation.
-- Core containers start consistently after reboot.
+- Docker is installed and validated; core platform containers will be covered by the Compose architecture.
 - Secrets are excluded from Git.
 - Basic health and backup checks are documented.
 
